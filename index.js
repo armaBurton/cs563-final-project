@@ -18,9 +18,7 @@ const createGameList = () => {
       gameArr.push(monster);
     }
   }
-
   console.log(gameArr);
-  listRandomizor();
 };
 
 const listRandomizor = () => {
@@ -32,8 +30,32 @@ const listRandomizor = () => {
   console.log(randomizedGameArr);
 };
 
-createGameList();
+const loadImages = () => {
+  for (let i = 0; i < randomizedGameArr.length; i++) {
+    const square = document.getElementById(`b${i + 1}`);
+    square.style.backgroundSize = "cover";
+    square.style.backgroundPosition = "center";
+    square.style.backgroundRepeat = "none";
+    square.style.backgroundImage = `url(
+      'https://www.dnd5eapi.co${randomizedGameArr[i].image}'
+    )`;
+    square.addEventListener("click", () => toggleVisibility(square, i + 1));
+  }
+};
 
+const toggleVisibility = (square, i) => {
+  square.style.backgroundImage === `url("")`
+    ? (square.style.backgroundImage = `url('https://www.dnd5eapi.co${
+        randomizedGameArr[i - 1].image
+      }')`)
+    : (square.style.backgroundImage = `url("")`);
+};
+
+createGameList();
+listRandomizor();
+listRandomizor();
+listRandomizor();
+loadImages();
 // After filtering the orginal list I queried the server again and then added the monster
 // image urls to the monster list to make linking images later a bit quicker, I could have
 // done this at the time of filtering, but I hadn't thought about it yet
