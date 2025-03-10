@@ -33,22 +33,27 @@ const listRandomizor = () => {
 const loadImages = () => {
   for (let i = 0; i < randomizedGameArr.length; i++) {
     const square = document.getElementById(`b${i + 1}`);
+    const innerDiv = document.getElementById(`p${i + 1}`);
+    innerDiv.style.opacity = "1";
     square.style.backgroundSize = "cover";
     square.style.backgroundPosition = "center";
     square.style.backgroundRepeat = "none";
     square.style.backgroundImage = `url(
-      'https://www.dnd5eapi.co${randomizedGameArr[i].image}'
-    )`;
-    square.addEventListener("click", () => toggleVisibility(square, i + 1));
+        'https://www.dnd5eapi.co${randomizedGameArr[i].image}'
+        )`;
+    // square.setAttribute("dataset", `${randomizedGameArr[i].name}`);
+    square.dataset.name = `${randomizedGameArr[i].name}`;
+    square.addEventListener("click", () => toggleVisibility(innerDiv, square));
   }
 };
 
-const toggleVisibility = (square, i) => {
-  square.style.backgroundImage === `url("")`
-    ? (square.style.backgroundImage = `url('https://www.dnd5eapi.co${
-        randomizedGameArr[i - 1].image
-      }')`)
-    : (square.style.backgroundImage = `url("")`);
+const toggleVisibility = (innerDiv, square) => {
+  console.log("click");
+  innerDiv.style.opacity === "0"
+    ? (innerDiv.style.opacity = "1")
+    : (innerDiv.style.opacity = "0");
+
+  console.log(square.dataset.name);
 };
 
 createGameList();
@@ -56,6 +61,7 @@ listRandomizor();
 listRandomizor();
 listRandomizor();
 loadImages();
+
 // After filtering the orginal list I queried the server again and then added the monster
 // image urls to the monster list to make linking images later a bit quicker, I could have
 // done this at the time of filtering, but I hadn't thought about it yet
