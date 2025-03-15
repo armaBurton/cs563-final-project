@@ -39,3 +39,8 @@
     background-color: yellow;
     border-radius: 5px;
 }
+
+.match {
+    pointer-events: none;
+    opacity: 1;
+}

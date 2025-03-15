@@ -1,5 +1,7 @@
 // import dndMonsters from "./data.js"; // oringal monster list, had some monsters without images and that wouldn't work for my memory game.
 import filteredMonsterList from "./filteredMonsterList.js";
+import { gamestate, toggleVisibility } from "./gamestate.js";
+// import { gamestate } from "./gamestate.js";
 
 const randoNumbo = (size) => {
   return Math.floor(Math.random() * size);
@@ -18,16 +20,26 @@ const createGameList = () => {
       gameArr.push(monster);
     }
   }
-  console.log(gameArr);
+  // console.log(gameArr);
 };
 
-const listRandomizor = () => {
-  while (gameArr.length > 0) {
-    const index = randoNumbo(gameArr.length);
-    randomizedGameArr.push(gameArr[index]);
-    gameArr.splice(index, 1);
+const listRandomizor = async (randomizeMe) => {
+  const tempArr = [];
+
+  while (randomizeMe.length > 0) {
+    const index = randoNumbo(randomizeMe.length);
+    tempArr.push(randomizeMe[index]);
+    randomizeMe.splice(index, 1);
   }
-  console.log(randomizedGameArr);
+  // console.log(tempArr);
+
+  // purge randomizeGameArr
+  while (randomizedGameArr > 0) {
+    randomizedGameArr.pop();
+  }
+
+  // repopulate randomizeGameArr
+  tempArr.map((t) => randomizedGameArr.push(t));
 };
 
 const loadImages = () => {
@@ -41,26 +53,24 @@ const loadImages = () => {
     square.style.backgroundImage = `url(
         'https://www.dnd5eapi.co${randomizedGameArr[i].image}'
         )`;
-    // square.setAttribute("dataset", `${randomizedGameArr[i].name}`);
     square.dataset.name = `${randomizedGameArr[i].name}`;
-    square.addEventListener("click", () => toggleVisibility(innerDiv, square));
+    // square.addEventListener("click", () => toggleVisibility(innerDiv, square));
+    square.addEventListener("click", () =>
+      gamestate(randomizedGameArr, innerDiv, square)
+    );
   }
 };
 
-const toggleVisibility = (innerDiv, square) => {
-  console.log("click");
-  innerDiv.style.opacity === "0"
-    ? (innerDiv.style.opacity = "1")
-    : (innerDiv.style.opacity = "0");
-
-  console.log(square.dataset.name);
-};
+// const gameController = () => {
+//   gamestate(randomizedGameArr);
+// };
 
 createGameList();
-listRandomizor();
-listRandomizor();
-listRandomizor();
+await listRandomizor(gameArr);
+await listRandomizor(randomizedGameArr);
+await listRandomizor(randomizedGameArr);
 loadImages();
+// gameController();
 
 // After filtering the orginal list I queried the server again and then added the monster
 // image urls to the monster list to make linking images later a bit quicker, I could have
