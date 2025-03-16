@@ -1,10 +1,10 @@
 /* about.css */
 /* font-family: UnifrakturCook, cursive; */
 
-.section-container{
+.section-container {
     width: 80vw;
     height: 80vh;
-    background-color: rgba(0,0,0, 0.75);
+    background-color: rgba(0, 0, 0, 0.75);
     display: flex;
     padding: 50px 350px;
     flex-direction: column;
@@ -19,7 +19,7 @@
     margin-bottom: 10px;
 }
 
-.motorcycle-selfie{
+.motorcycle-selfie {
     width: 20vw;
     height: 20vw;
     border-radius: 5px;
@@ -28,7 +28,6 @@
     margin-bottom: 10px;
 }
 
-
 .bio {
     color: yellow;
     margin-bottom: 20px;
@@ -36,6 +35,60 @@
     padding-right: 10px;
 }
 
-/* ::-webkit-scrollbar {
-    display : none;
-} */
+.work-list {
+    list-style-type: none;
+    color: yellow;
+}
+
+.work-item {
+    margin-bottom: 5px;
+    font-size: 1.5em;
+}
+
+.work-desc {
+    font-size: 0.75em;
+}
+
+.section-container-override {
+    padding-left: 450px;
+    padding-right: 450px;
+}
+
+.wuts-it {
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.project-image {
+    width: 10vw;
+    height: 10vw;
+    object-fit: cover;
+}
+
+.project-container {
+    flex-direction: row;
+    gap: 60px;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-left: 300px;
+    padding-right: 300px;
+}
+
+.link-container {
+    width: inherit;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+
+.mark {
+    width: 3em;
+    height: 3em;
+    object-fit: contain;
+}
+
+.logo {
+    height: 3em;
+    width: auto;
+    object-fit: contain;
+}
