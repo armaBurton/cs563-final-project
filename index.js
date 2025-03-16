@@ -1,7 +1,6 @@
-// import dndMonsters from "./data.js"; // oringal monster list, had some monsters without images and that wouldn't work for my memory game.
+// oringal monster list, had some monsters without images and that wouldn't work for my memory game.
 import filteredMonsterList from "./filteredMonsterList.js";
-import { gamestate, toggleVisibility } from "./gamestate.js";
-// import { gamestate } from "./gamestate.js";
+import { gamestate } from "./gamestate.js";
 
 const randoNumbo = (size) => {
   return Math.floor(Math.random() * size);
@@ -20,7 +19,6 @@ const createGameList = () => {
       gameArr.push(monster);
     }
   }
-  // console.log(gameArr);
 };
 
 const listRandomizor = async (randomizeMe) => {
@@ -31,7 +29,6 @@ const listRandomizor = async (randomizeMe) => {
     tempArr.push(randomizeMe[index]);
     randomizeMe.splice(index, 1);
   }
-  // console.log(tempArr);
 
   // purge randomizeGameArr
   while (randomizedGameArr > 0) {
@@ -54,16 +51,11 @@ const loadImages = () => {
         'https://www.dnd5eapi.co${randomizedGameArr[i].image}'
         )`;
     square.dataset.name = `${randomizedGameArr[i].name}`;
-    // square.addEventListener("click", () => toggleVisibility(innerDiv, square));
     square.addEventListener("click", () =>
       gamestate(randomizedGameArr, innerDiv, square)
     );
   }
 };
-
-// const gameController = () => {
-//   gamestate(randomizedGameArr);
-// };
 
 createGameList();
 await listRandomizor(gameArr);

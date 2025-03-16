@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="styles.css" />
     <link rel="stylesheet" type="text/css" href="gameGrid.css" />
+    <link rel="stylesheet" type="text/css" href="about.css" />
     <title>DnD Memory</title>
     <script defer src="index.js" type="module"></script>
     <script defer src="gamestate.js" type="module"></script>
@@ -20,6 +21,8 @@
         </ul>
     </nav>
     <section id="game">
+        <h1 class="final">CS563 Final Project</h1>
+        <h2 class="subhead">D&D Memory</h2>
         <div class="game-grid">
             <div id="b1" class="grid-unit"><div id="p1" class="picture-container"></div></div>
             <div id="b2" class="grid-unit"><div id="p2" class="picture-container"></div></div>
@@ -43,7 +46,7 @@
             <div id="b20" class="grid-unit"><div id="p20" class="picture-container"></div></div>
         </div>
         <div id="win-state" class="win-state">
-            <h2 class="win-head">Congratulations!</h2>
+            <h3 class="win-head">Congratulations!</h3>
             <div class="win-subhead">You found all the monsters!</div>
             <div class="button-container">
                 <button id="new-game" class="new-game button">New Game</button>
@@ -53,12 +56,30 @@
 
     </section>
 
-    <section id="about"></section>
-    <section id="previous-work">
-
+    <section id="about" class="section">
+        <h2 class="subhead">About</h2>
+        <div class="section-container">
+            <h3 class="about-sub">Hello, I'm Arma</h3>
+            <img class="selfie motorcycle-selfie" src="./backgrounds/motorcycle1.jpg" alt="Image of myself in my motorcycle gear">
+            <div class="words">
+            <p class="bio">
+                My name is Arma and I used to work as a graphic designer. When I first started I mostly made ads for Facebook and Google. After doing that for about a year I starting working at Tube Art as a production sign designer. That lasted until the corona virus.</p>
+                <p class="bio">I did a Full-Stack Bootcamp in 2022
+                and shortly after I completed the program tech companies started
+                laying off software engineers, so I'm back in school working on
+                my Masters Degree.
+              </p>
+              <p class="bio">I like riding motorcycles, flying FPV drones, and going to see shows-most of which are my friends bands. I volunteer with the 
+                Shady Pines Music Festival and we just made our fundraising goal and we're staring to prepare for this year
+              </p>
+            </div>
+        </div>
     </section>
-    <section id="projects">
-        <div class="projects-container">
+    <section id="previous-work" class="section">
+        <div class="section-container"></div>
+    </section>
+    <section id="projects" class="section">
+        <div class="section-container">
             <div>
                 <p>calculator</p>
                 https://armaburton.github.io/LAB-04a-calculator-Nov21/
@@ -93,7 +114,9 @@
             
 
     </section>
-    <section id="contact"></section>
+    <section id="contact" class="section">
+        <div class="section-container"></div>
+    </section>
     
 </body>
 </html>

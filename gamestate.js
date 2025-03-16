@@ -12,13 +12,11 @@ export const gamestate = async (randomizedGameArr, innerDiv, square) => {
     }
 
     if (chooser.length === 2) {
-      //   console.log(chooser[0], chooser[1].innerDiv.id);
-
       togglePointerEvents();
       console.log(chooser[0].square.dataset.name);
       console.log(chooser[1].square.dataset.name);
 
-      await delay(2000);
+      await delay(1000);
 
       if (chooser[0].square.dataset.name === chooser[1].square.dataset.name) {
         handleMatch(chooser);
@@ -98,7 +96,4 @@ const winState = () => {
   quit.addEventListener("click", () => {
     winModal.style.visibility = "hidden";
   });
-  //   newGame.addEventListener("click", window.location.reload(true));
-
-  //   quit.addEventListener("click", (winModal.style.visibility = "hidden"));
 };

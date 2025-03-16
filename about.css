@@ -1,0 +1,41 @@
+/* about.css */
+/* font-family: UnifrakturCook, cursive; */
+
+.section-container{
+    width: 80vw;
+    height: 80vh;
+    background-color: rgba(0,0,0, 0.75);
+    display: flex;
+    padding: 50px 350px;
+    flex-direction: column;
+}
+
+.words {
+    overflow-y: scroll;
+}
+
+.about-sub {
+    color: yellow;
+    margin-bottom: 10px;
+}
+
+.motorcycle-selfie{
+    width: 20vw;
+    height: 20vw;
+    border-radius: 5px;
+    height: calc(width);
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+
+.bio {
+    color: yellow;
+    margin-bottom: 20px;
+    line-height: 1.5em;
+    padding-right: 10px;
+}
+
+/* ::-webkit-scrollbar {
+    display : none;
+} */
