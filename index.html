@@ -7,21 +7,24 @@
     <link rel="stylesheet" type="text/css" href="styles.css" />
     <link rel="stylesheet" type="text/css" href="gameGrid.css" />
     <link rel="stylesheet" type="text/css" href="about.css" />
+    <link rel="stylesheet" type="text/css" href="form.css" />
     <title>DnD Memory</title>
     <script defer src="index.js" type="module"></script>
     <script defer src="gamestate.js" type="module"></script>
+    <script defer src="form.js" type="module"></script>
 </head>
 
 <body>
     <nav>
         <ul class="nav-list">
             <li class="nav-list-item"><a href="#game" class="DnD nav-link">DnD</a></li>
-            <li class="nav-list-item"><a href="#about" class="nav_link">About</a></li>
-            <li class="nav-list-item"><a href="#previous-work" class="nav_link">Previous Work</a></li>
-            <li class="nav-list-item"><a href="#projects" class="nav_link">Projects</a></li>
-            <li class="nav-list-item"><a href="#contact" class="nav_link">Contact</a></li>
+            <li class="nav-list-item"><a href="#about" class="nav-link">About</a></li>
+            <li class="nav-list-item"><a href="#previous-work" class="nav-link">Previous Work</a></li>
+            <li class="nav-list-item"><a href="#projects" class="nav-link">Projects</a></li>
+            <li class="nav-list-item"><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
     </nav>
+
     <section id="game">
         <h1 class="final">CS563 Final Project</h1>
         <h2 class="subhead">D&D Memory</h2>
@@ -101,31 +104,37 @@
     <section id="about" class="section">
         <h2 class="subhead">About</h2>
         <div class="section-container">
-            <h3 class="about-sub">Hello, I'm Arma</h3>
-            <img class="selfie motorcycle-selfie" src="./backgrounds/motorcycle1.jpg"
-                alt="Image of myself in my motorcycle gear">
-            <div class="words">
-                <p class="bio">
-                    My name is Arma and I used to work as a graphic designer. When I first started I mostly made ads for
-                    Facebook and Google. After doing that for about a year I starting working at Tube Art as a
-                    production sign designer. That lasted until the corona virus.
-                </p>
-                <p class="bio">
-                    I did a Full-Stack Bootcamp in 2022 and shortly after I completed the program tech companies started
-                    laying off software engineers, so I'm back in school working on my Masters Degree.
-                </p>
-                <p class="bio">
-                    I like riding motorcycles, flying FPV drones, and going to see shows-most of which are my
-                    friends bands. I volunteer with the Shady Pines Music Festival and we just made our fundraising goal
-                    and we're staring to prepare for
-                    this year
-                </p>
+            <div class="section-sub-container">
+                <h3 class="about-sub">Hello, I'm Arma</h3>
+                <img class="selfie motorcycle-selfie" src="./backgrounds/motorcycle1.jpg"
+                    alt="Image of myself in my motorcycle gear">
+                <div class="words">
+                    <p class="bio">
+                        My name is Arma and I used to work as a graphic designer. When I first started I mostly made ads
+                        for
+                        Facebook and Google. After doing that for about a year I starting working at Tube Art as a
+                        production sign designer. That lasted until the corona virus.
+                    </p>
+                    <p class="bio">
+                        I did a Full-Stack Bootcamp in 2022 and shortly after I completed the program tech companies
+                        started
+                        laying off software engineers, so I'm back in school working on my Masters Degree.
+                    </p>
+                    <p class="bio">
+                        I like riding motorcycles, flying FPV drones, and going to see shows-most of which are my
+                        friends bands. I volunteer with the Shady Pines Music Festival and we just made our fundraising
+                        goal
+                        and we're staring to prepare for
+                        this year
+                    </p>
+                </div>
             </div>
         </div>
     </section>
+
     <section id="previous-work" class="section">
         <h2 class="subhead">Previous Work</h2>
-        <div class="section-container section-container-override">
+        <div class="section-container allow-scroll">
             <ul class="work-list">
                 <li class="work-item">Alpha Software - <span class="work-desc">Internship</span></li>
                 <p class="wuts-it">Low/No code application development.</p>
@@ -148,66 +157,120 @@
             </ul>
         </div>
     </section>
+
     <section id="projects" class="section">
         <h2 class="subhead">Projects</h2>
-        <div class="section-container project-container">
-            <div>
-                <img class="project-image" src="./backgrounds/superGoblinFighter.png"
-                    alt="screenshot of Super Monster Fighter">
-                <div class="link-container">
-                    <a href="https://armaburton.github.io/ALCH-Deliverable-From-Scratch-Goblin-Fighter/"
-                        target="_blank">
-                        <img class="mark" src="./backgrounds/github-mark-white.png" alt="Link To Live Site"></a>
-                    <a href="https://github.com/armaBurton/ALCH-Deliverable-From-Scratch-Goblin-Fighter"
-                        target="_blank">
-                        <img class="logo" src="./backgrounds/GitHub_Logo_White.png" alt="Link to Github Repo"></a>
+        <div class="section-container project-container allow-scroll">
+            <div class="project-sub-container">
+                <div>
+                    <img class="project-image" src="./backgrounds/superGoblinFighter.png"
+                        alt="screenshot of Super Monster Fighter">
+                    <div class="link-container">
+                        <a href="https://armaburton.github.io/ALCH-Deliverable-From-Scratch-Goblin-Fighter/"
+                            target="_blank">
+                            <img class="mark" src="./backgrounds/github-mark-white.png" alt="Link To Live Site"></a>
+                        <a href="https://github.com/armaBurton/ALCH-Deliverable-From-Scratch-Goblin-Fighter"
+                            target="_blank">
+                            <img class="logo" src="./backgrounds/GitHub_Logo_White.png" alt="Link to Github Repo"></a>
+                    </div>
                 </div>
-            </div>
-            <div>
-                <img src="./backgrounds/maze.png" alt="Random Maze Generator and Solver" class="project-image">
-                <div class="link-container">
-                    <a href="https://rando-maze-generator.netlify.app/" target="_blank">
-                        <img class="mark" src="./backgrounds/github-mark-white.png" alt="Link To Live Site"></a>
-                    <a href="https://github.com/armaBurton/rando_maze_genrato/tree/main" target="_blank">
-                        <img class="logo" src="./backgrounds/GitHub_Logo_White.png" alt="Link to Github Repo"></a>
+                <div>
+                    <img src="./backgrounds/maze.png" alt="Random Maze Generator and Solver" class="project-image">
+                    <div class="link-container">
+                        <a href="https://rando-maze-generator.netlify.app/" target="_blank">
+                            <img class="mark" src="./backgrounds/github-mark-white.png" alt="Link To Live Site"></a>
+                        <a href="https://github.com/armaBurton/rando_maze_genrato/tree/main" target="_blank">
+                            <img class="logo" src="./backgrounds/GitHub_Logo_White.png" alt="Link to Github Repo"></a>
+                    </div>
                 </div>
-            </div>
-            <div>
-                <img src="./backgrounds/calculator.png" alt="Calculator" class="project-image">
-                <div class="link-container">
-                    <a href="https://armaburton.github.io/LAB-04a-calculator-Nov21/" target="_blank">
-                        <img class="mark" src="./backgrounds/github-mark-white.png" alt="Link To Live Site"></a>
-                    <a href="https://github.com/armaBurton/LAB-04a-calculator-Nov21" target="_blank">
-                        <img class="logo" src="./backgrounds/GitHub_Logo_White.png" alt="Link to Github Repo"></a>
+                <div>
+                    <img src="./backgrounds/calculator.png" alt="Calculator" class="project-image">
+                    <div class="link-container">
+                        <a href="https://armaburton.github.io/LAB-04a-calculator-Nov21/" target="_blank">
+                            <img class="mark" src="./backgrounds/github-mark-white.png" alt="Link To Live Site"></a>
+                        <a href="https://github.com/armaBurton/LAB-04a-calculator-Nov21" target="_blank">
+                            <img class="logo" src="./backgrounds/GitHub_Logo_White.png" alt="Link to Github Repo"></a>
+                    </div>
                 </div>
-            </div>
-            <div>
-                <img src="./backgrounds/magic8Ball.png" alt="Magic 8 Ball" class="project-image">
-                <div class="link-container">
-                    <a href="https://armaburton.github.io/LAB-04b-magic-8-ball/" target="_blank">
-                        <img class="mark" src="./backgrounds/github-mark-white.png" alt="Link To Live Site"></a>
-                    <a href="hhttps://github.com/armaBurton/LAB-04b-magic-8-ball" target="_blank">
-                        <img class="logo" src="./backgrounds/GitHub_Logo_White.png" alt="Link to Github Repo"></a>
+                <div>
+                    <img src="./backgrounds/magic8Ball.png" alt="Magic 8 Ball" class="project-image">
+                    <div class="link-container">
+                        <a href="https://armaburton.github.io/LAB-04b-magic-8-ball/" target="_blank">
+                            <img class="mark" src="./backgrounds/github-mark-white.png" alt="Link To Live Site"></a>
+                        <a href="hhttps://github.com/armaBurton/LAB-04b-magic-8-ball" target="_blank">
+                            <img class="logo" src="./backgrounds/GitHub_Logo_White.png" alt="Link to Github Repo"></a>
+                    </div>
                 </div>
-            </div>
-            <div>
-                <img src="./backgrounds/sineWaveGenerator.png" alt="Simonesque Sine Wave Generator"
-                    class="project-image">
-                <div class="link-container">
-                    <a href="https://sine-wave-generator-01.netlify.app/" target="_blank">
-                        <img class="mark" src="./backgrounds/github-mark-white.png" alt="Link To Live Site"></a>
-                    <a href="https://github.com/armaBurton/sine-wave-generator-01" target="_blank">
-                        <img class="logo" src="./backgrounds/GitHub_Logo_White.png" alt="Link to Github Repo"></a>
-                </div>
+                <div>
+                    <img src="./backgrounds/sineWaveGenerator.png" alt="Simonesque Sine Wave Generator"
+                        class="project-image">
+                    <div class="link-container">
+                        <a href="https://sine-wave-generator-01.netlify.app/" target="_blank">
+                            <img class="mark" src="./backgrounds/github-mark-white.png" alt="Link To Live Site"></a>
+                        <a href="https://github.com/armaBurton/sine-wave-generator-01" target="_blank">
+                            <img class="logo" src="./backgrounds/GitHub_Logo_White.png" alt="Link to Github Repo"></a>
+                    </div>
 
+                </div>
             </div>
         </div>
 
 
     </section>
+
     <section id="contact" class="section">
         <h2 class="subhead">Contact</h2>
-        <div class="section-container"></div>
+        <div class="section-container form-override">
+            <div class="form-sub-container">
+                <h3 class="about-sub">Say Hi!</h3>
+                <form action="submit" class="form-container" id="form-container">
+                    <div class="input-field">
+                        <label for="name" class="form-label">Name:</label>
+                        <input type="text" name="name" id="name" class="form-words" required>
+                    </div>
+                    <div class="input-field">
+                        <label for="email" class="form-label">Email:</label>
+                        <input type="email" name"email" id="email" class="form-words" required>
+                    </div>
+                    <div class="input-field">
+                        <label for="password" class="form-label">Password:</label>
+                        <input type="password" name="password" id="password" class="form-words" required>
+                    </div>
+                    <div class="input-field">
+                        <label for="verify" class="form-label">Verify Password:</label>
+                        <input type="password" name="verify" id="verify" class="form-words" required>
+                    </div>
+                    <fieldset>
+                        <legend class="why" style="border: none;">Why are you contacting me?</legend>
+                        <div class="radio-group">
+                            <field class="radio-inputs">
+                                <input type="radio" name="contacting-you" value="dunno" id="dunno"
+                                    class="radio-selector dunno" required>
+                                <label for="dunno" class="contact-label">I don't know...</label>
+                            </field>
+                            <field class="radio-inputs">
+                                <input type="radio" name="contacting-you" value="money" id="money"
+                                    class="radio-selector money">
+                                <label for="money">Where's my money?</label>
+                            </field>
+                            <field class="radio-inputs">
+                                <input type="radio" name="contacting-you" value="warranty" id="warranty"
+                                    class="radio-selector warranty">
+                                <label for="warranty">Contacting you about your car's extended warranty</label>
+                            </field>
+                        </div>
+                    </fieldset>
+                    <div class="input-field">
+                        <label for="message" class="form-label">Message:</label>
+                        <textarea name="message" id="message" rows="3"></textarea>
+                    </div>
+                    <div class="form-button-container">
+                        <input type="submit" id="form-submit" class="button resize submit">
+                        <input type="reset" id="form-reset" class="button resize reset">
+                    </div>
+                </form>
+            </div>
+        </div>
     </section>
 
 </body>

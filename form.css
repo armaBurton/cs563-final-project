@@ -1,0 +1,69 @@
+/* form.css */
+
+.form-container {
+    min-width: 500px;
+    height: 70vh;
+}
+
+.form-label {
+    margin-top: 10px;
+    margin-bottom: 3px;
+}
+
+.input-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.about-sub {
+    margin-top: 40px;
+}
+
+label {
+    color: yellow
+}
+
+.why {
+    color: yellow;
+    border: none;
+}
+
+fieldset {
+    border: none;
+    margin-top: 20px;
+}
+
+.radio-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.radio-inputs {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.resize {
+    width: 150px;
+    height: 50px;
+}
+
+#message {
+    padding: 5px;
+}
+
+.form-override {
+    overflow: hidden;
+}
+
+.form-sub-container {
+    max-height: 75vh;
+}
+
+.form-button-container {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+}
