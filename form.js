@@ -15,7 +15,6 @@ const handleSubmit = (e) => {
     formObject.emailInput = document.getElementById("email").value
     formObject.passwordInput = document.getElementById("password").value
     formObject.verifyInput = document.getElementById("verify").value
-    // formObject.contactOptions = document.querySelectorAll('input[name="contacting-you"]').value;
     formObject.message = document.getElementById("message").value
 
     const radioVals = document.querySelectorAll("input[name=contacting-you");
@@ -28,6 +27,5 @@ const handleSubmit = (e) => {
 
     console.log(formObject)
 
-    // window.location.reload()
     window.location.href = "#contact"
 }
