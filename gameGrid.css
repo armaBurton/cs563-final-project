@@ -126,35 +126,35 @@
 .new-game,
 .submit {
     background-color: chartreuse;
-    color: fuchsia
+    color: darkmagenta
 }
 
 .new-game:hover,
 .submit:hover {
-    background-color: #b1ff63;
-    color: #9e009e;
+    background-color: rgb(72, 145, 0);
+    color: fuchsia;
 }
 
 .new-game:active,
 .submit:active {
-    background-color: fuchsia;
+    background-color: darkmagenta;
     color: chartreuse
 }
 
 .quit,
 .reset {
-    background-color: fuchsia;
+    background-color: darkmagenta;
     color: chartreuse
 }
 
 .quit:hover,
 .reset:hover {
-    background-color: #9e009e;
-    color: #b1ff63
+    background-color: magenta;
+    color: rgb(72, 145, 0)
 }
 
 .quit:active,
 .reset:active {
-    background-color: chartreuse;
+    background-color: rgb(72, 145, 0);
     color: fuchsia
 }
